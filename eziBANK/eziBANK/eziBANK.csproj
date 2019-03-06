@@ -17,9 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Services\Navigation\" />
     <Folder Include="ViewModel\ViewModelLocator\" />
-    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\LoginView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
