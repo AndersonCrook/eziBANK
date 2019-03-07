@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DLToolkit.Forms.Controls;
+using eziBANK.Services.Navigation;
+using eziBANK.ViewModel.ViewModelLocator;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,14 +13,26 @@ namespace eziBANK
     {
         public App()
         {
+            DependencyService.Register<INavigationService, NavigationService>();
             InitializeComponent();
+            InitPlugins();
+            InitNavigation();
+        }
 
-            MainPage = new MainPage();
+        public Task InitNavigation()
+        {
+            var navigationService = Locator.Instance.Resolve<INavigationService>();
+            return navigationService.InitializeAsync();
+        }
+
+        public void InitPlugins()
+        {
+            FlowListView.Init();
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            //Handle when your app starts
         }
 
         protected override void OnSleep()

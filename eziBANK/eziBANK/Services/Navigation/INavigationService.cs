@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using eziBANK.ViewModel;
+using System;
+using System.Threading.Tasks;
 
 namespace eziBANK.Services.Navigation
 {
     public interface INavigationService
     {
+        Task InitializeAsync();
+
+        Task NavigateToAsync(Type viewModelType);
     }
 }
