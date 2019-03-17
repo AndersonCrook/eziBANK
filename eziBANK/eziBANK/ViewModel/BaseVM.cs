@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace eziBANK.ViewModel
 {
-    class BaseVM : ViewModelBase
+    public class BaseVM : ViewModelBase
     {
         public virtual Task InitializeAsync(object navigationData)
         {

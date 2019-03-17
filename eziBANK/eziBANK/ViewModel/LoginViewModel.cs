@@ -1,9 +1,6 @@
 ﻿using eziBANK.Model;
 using eziBANK.Services;
 using eziBANK.Services.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 

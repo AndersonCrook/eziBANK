@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                 x:Class="eziBANK.View.PopUps.DigitalPopUp">
+    
+   <pages:PopupPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="EntryStyle" TargetType="Entry">
+                        <Setter Property="PlaceholderColor" Value="#9cdaf1"/>
+                        <Setter Property="TextColor" Value="#7dbbe6"/>
+                    </Style>
+                </ResourceDictionary>
+             </pages:PopupPage.Resources>
+            
+            <pages:PopupPage.Animation>
+            <animations:ScaleAnimation
+              PositionIn="Bottom"
+              PositionOut="Center"
+              ScaleIn="1"
+              ScaleOut="0.7"
+              DurationIn="700"
+              EasingIn="BounceOut"/>
+          </pages:PopupPage.Animation>
+             <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+         
+       <AbsoluteLayout HeightRequest="300" WidthRequest="250">
+            <Frame  HeightRequest="290" WidthRequest="250" Padding="0" BorderColor="Transparent" IsClippedToBounds="False" CornerRadius="10"
+                   HasShadow="True" HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF"   VerticalOptions="Start">
+            
+        <StackLayout Padding="15">
+
+                <StackLayout Margin="10" BackgroundColor="#FFFFFF" HeightRequest="30" VerticalOptions="Start">
+                  <Label Text="Febrasgo" x:Name="lblNome" TextColor="#C51162" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />  
+               </StackLayout>    
+                <BoxView  HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="#C51162"/>
+     
+              <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                             <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_Tapped_2"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="forward.png" HeightRequest="30" WidthRequest="30"/>                   
+                            <Label   Text="ENVIAR CONTEÚDO" TextColor="Black" VerticalTextAlignment="Center" FontAttributes="Bold"/>            
+                        </StackLayout> 
+                        
+                        <BoxView Margin="15" HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+                        
+                          <StackLayout Orientation="Horizontal">
+                             <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_Tapped_1"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="calculator.png"  HeightRequest="30" WidthRequest="30"/>                   
+                            <Label Text="FAZER CÁLCULOS" TextColor="Black" VerticalTextAlignment="Center" FontAttributes="Bold"/>            
+                        </StackLayout> 
+                        
+                        <BoxView Margin="15" HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
+                        
+                          <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="garbage.png"  HeightRequest="30" WidthRequest="30"/>                   
+                            <Label   Text="EXCLUIR" TextColor="Black" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        </StackLayout> 
+                 </StackLayout>
+                  </StackLayout>
+            
+                  </Frame>
+                </AbsoluteLayout>
+               
+        </ScrollView>
+
+</pages:PopupPage>
+

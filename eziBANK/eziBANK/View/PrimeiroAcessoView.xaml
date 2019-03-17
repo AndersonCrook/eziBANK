@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="eziBANK.View.PrimeiroAcessoView">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+           <StackLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start" 
+                        HeightRequest="300">
+                
+                <Image Source="baloes"
+                       WidthRequest="200"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"/>
+                
+                 <Image Source="circulo"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+                
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Margin="10">
+                
+                <Image Source="logoezibank"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"/>
+                
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                
+                 <StackLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="50">
+                    
+                     <Button Text="Quero ser um ezi"
+                             TextColor="#A2A2A2"
+                             FontSize="Medium"
+                             FontAttributes="Bold"
+                             BorderWidth="2"
+                             BorderColor="#A2A2A2"
+                             BackgroundColor="Transparent"
+                             WidthRequest="100"
+                             HeightRequest="50"
+                             BorderRadius="9"/>
+                        
+                     <Button Text="Já sou ezi"
+                             TextColor="White"  
+                             FontSize="Medium"
+                             FontAttributes="Bold"
+                             BorderWidth="100"
+                             BackgroundColor="#2DB3D3"
+                             BorderColor="#Gray"
+                             WidthRequest="100"
+                             HeightRequest="50"
+                             BorderRadius="9"/>
+                    
+                    <Label Text="Saiba mais!"
+                           TextColor="#2DB3D"
+                           FontSize = "20"
+                           FontAttributes="Bold"/>
+                    
+            </StackLayout>
+                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

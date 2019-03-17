@@ -23,6 +23,7 @@ namespace eziBANK.ViewModel.ViewModelLocator
             _container.RegisterType<INavigationService, NavigationService>();
 
             //registro de ViewModel
+            _container.RegisterType<PrimeiroAcessoViewModel>();
             _container.RegisterType<LoginViewModel>();
 
         }

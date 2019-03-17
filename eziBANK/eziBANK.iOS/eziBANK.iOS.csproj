@@ -96,6 +96,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NavigationBarGradiente.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -105,16 +106,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
@@ -141,6 +136,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icone120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icone180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icone120-1.png" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -159,12 +159,31 @@
       <Version>1.5.231</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.5.188</Version>
+    </PackageReference>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>2.5.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\eziBANK\eziBANK.csproj">
-      <Project>{75595A18-9E21-4DAB-818A-F42A32FA90E7}</Project>
+      <Project>{63F8C455-6CF2-4B56-8CE9-598B6C8A068A}</Project>
       <Name>eziBANK</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\animation_w225_h225.json" />
+    <AndroidAsset Include="Resources\animation_w600_h436.json" />
+    <AndroidAsset Include="Resources\animation_w600_h600.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SplashScreen.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\acesso.png" />
+    <BundleResource Include="Resources\baloes.png" />
+    <BundleResource Include="Resources\circulo.png" />
+    <BundleResource Include="Resources\logoezibank.png" />
   </ItemGroup>
 </Project>

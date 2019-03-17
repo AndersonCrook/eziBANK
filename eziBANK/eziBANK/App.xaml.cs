@@ -1,5 +1,6 @@
 ﻿using DLToolkit.Forms.Controls;
 using eziBANK.Services.Navigation;
+using eziBANK.View;
 using eziBANK.ViewModel.ViewModelLocator;
 using System;
 using System.Threading.Tasks;

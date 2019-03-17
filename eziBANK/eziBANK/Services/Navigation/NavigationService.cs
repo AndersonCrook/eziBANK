@@ -3,7 +3,6 @@ using eziBANK.ViewModel;
 using eziBANK.ViewModel.ViewModelLocator;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -28,7 +27,7 @@ namespace eziBANK.Services.Navigation
 
         public Task InitializeAsync()
         {
-            return NavigateToAsync<LoginViewModel>();
+            return NavigateToAsync <PrimeiroAcessoViewModel>();
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : BaseVM
@@ -100,13 +99,24 @@ namespace eziBANK.Services.Navigation
 
             if (page is LoginView)
             {
-                //CurrentApplication.MainPage = page;
-                CurrentApplication.MainPage = new NavigationPage(page);
+                CurrentApplication.MainPage = new eziBANK.Controls.NavigationBarGradiente(page)
+                {
+                    LeftColor = Color.FromHex("#2DA0D1"),
+                    RightColor = Color.FromHex("#2ECBD6")
+                };
             }
-           // else if (page is HomeView)
-           //{
-           //     CurrentApplication.MainPage = new NavigationPage(page);
-           // }
+            else if (page is PrimeiroAcessoView)
+            {
+                CurrentApplication.MainPage = new eziBANK.Controls.NavigationBarGradiente(page)
+                {
+                    LeftColor = Color.FromHex("#2DA0D1"),
+                    RightColor = Color.FromHex("#2ECBD6")
+                };
+            }
+            // else if (page is HomeView)
+            //{
+            //     CurrentApplication.MainPage = new NavigationPage(page);
+            // }
 
             else
             {
@@ -153,6 +163,7 @@ namespace eziBANK.Services.Navigation
 
         public void CreatePageViewModelMappings()
         {
+            _mappings.Add(typeof(PrimeiroAcessoViewModel), typeof(PrimeiroAcessoView));
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
         }
     }

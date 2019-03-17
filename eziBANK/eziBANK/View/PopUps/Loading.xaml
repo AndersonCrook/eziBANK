@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+                 x:Class="eziBANK.View.PopUps.Loading">
+  <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            
+        </Grid.RowDefinitions>
+        
+                <forms:AnimationView 
+                 Grid.Row="0"
+                 x:Name="animationView" 
+                 WidthRequest="200"
+                 HeightRequest="200"
+                 Animation="animation_w225_h225.json" 
+                 Loop="true" 
+                 AutoPlay="true"
+                 VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand" />
+        
+        <Label Grid.Row="1"
+               Text="Por favor aguarde..." 
+               TextColor="White" FontSize="18" 
+               HorizontalTextAlignment="Center" 
+               Margin="0,-200,0,0" 
+               VerticalOptions="StartAndExpand" 
+               VerticalTextAlignment="Start"  
+               FontAttributes="Bold"/> 
+      
+  </Grid>
+</pages:PopupPage>

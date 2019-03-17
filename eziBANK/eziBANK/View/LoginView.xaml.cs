@@ -14,7 +14,8 @@ namespace eziBANK.View
 	{
 		public LoginView ()
 		{
-			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+            InitializeComponent ();
 		}
 	}
 }
