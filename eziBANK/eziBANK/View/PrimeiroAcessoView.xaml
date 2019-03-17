@@ -15,19 +15,22 @@
                        VerticalOptions="Center"
                        HorizontalOptions="End"/>
                 
-                 <Image Source="circulo"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Start"/>
+                 
                 
             </StackLayout>
             
             <StackLayout HorizontalOptions="FillAndExpand"
                          VerticalOptions="CenterAndExpand"
-                         Margin="10">
+                         HeightRequest="200">
                 
                 <Image Source="logoezibank"
                        VerticalOptions="Center"
+                       Margin="10"
                        HorizontalOptions="End"/>
+                
+                <Image Source="circulo"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
                 
             </StackLayout>
             
