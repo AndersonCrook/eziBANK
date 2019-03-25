@@ -18,6 +18,10 @@
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.5.1" />
+    <PackageReference Include="Plugin.Fingerprint" Version="1.4.9" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +36,14 @@
   <ItemGroup>
     <Folder Include="View\PopUps\" />
     <Folder Include="Controls\" />
+    <Folder Include="Model\ModelControls\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="View\PopUps\LoginView.xaml.cs" />
     <Compile Remove="View\PrimeiroAcesso.xaml.cs" />
+    <Compile Remove="View\MenuPrincipalView.cs" />
+    <Compile Remove="View\MenuView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

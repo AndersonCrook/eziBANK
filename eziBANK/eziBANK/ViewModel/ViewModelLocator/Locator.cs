@@ -25,7 +25,9 @@ namespace eziBANK.ViewModel.ViewModelLocator
             //registro de ViewModel
             _container.RegisterType<PrimeiroAcessoViewModel>();
             _container.RegisterType<LoginViewModel>();
-
+            _container.RegisterType<MenuViewModel>();
+            _container.RegisterType<PaginaPrincipalViewModel>();
+            _container.RegisterType<PagamentoViewModel>();
         }
 
         public T Resolve<T>()

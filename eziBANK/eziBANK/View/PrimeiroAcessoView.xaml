@@ -8,30 +8,17 @@
             
            <StackLayout HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start" 
-                        HeightRequest="300">
+                        HeightRequest="300">     
                 
-                <Image Source="baloes"
-                       WidthRequest="200"
-                       VerticalOptions="Center"
-                       HorizontalOptions="End"/>
-                
-                 
+                <Image Source="logoezibank"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Margin="10"/>
                 
             </StackLayout>
             
             <StackLayout HorizontalOptions="FillAndExpand"
-                         VerticalOptions="CenterAndExpand"
-                         HeightRequest="200">
-                
-                <Image Source="logoezibank"
-                       VerticalOptions="Center"
-                       Margin="10"
-                       HorizontalOptions="End"/>
-                
-                <Image Source="circulo"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Start"/>
-                
+                         VerticalOptions="CenterAndExpand">
             </StackLayout>
             
             <StackLayout HorizontalOptions="FillAndExpand"
@@ -61,10 +48,11 @@
                              BorderColor="#Gray"
                              WidthRequest="100"
                              HeightRequest="50"
-                             BorderRadius="9"/>
+                             BorderRadius="9"
+                             Command="{Binding Login}"/>
                     
                     <Label Text="Saiba mais!"
-                           TextColor="#2DB3D"
+                           TextColor="#Black"
                            FontSize = "20"
                            FontAttributes="Bold"/>
                     

@@ -99,13 +99,13 @@ namespace eziBANK.Services.Navigation
 
             if (page is LoginView)
             {
-                CurrentApplication.MainPage = new eziBANK.Controls.NavigationBarGradiente(page)
-                {
-                    LeftColor = Color.FromHex("#2DA0D1"),
-                    RightColor = Color.FromHex("#2ECBD6")
-                };
+                CurrentApplication.MainPage = page;
             }
             else if (page is PrimeiroAcessoView)
+            {
+                CurrentApplication.MainPage = page;
+            }
+            else if (page is MenuView)
             {
                 CurrentApplication.MainPage = new eziBANK.Controls.NavigationBarGradiente(page)
                 {
@@ -113,11 +113,6 @@ namespace eziBANK.Services.Navigation
                     RightColor = Color.FromHex("#2ECBD6")
                 };
             }
-            // else if (page is HomeView)
-            //{
-            //     CurrentApplication.MainPage = new NavigationPage(page);
-            // }
-
             else
             {
                 var nav = CurrentApplication.MainPage as NavigationPage;
@@ -165,6 +160,9 @@ namespace eziBANK.Services.Navigation
         {
             _mappings.Add(typeof(PrimeiroAcessoViewModel), typeof(PrimeiroAcessoView));
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
+            _mappings.Add(typeof(MenuViewModel), typeof(MenuView));
+            _mappings.Add(typeof(PaginaPrincipalViewModel), typeof(PaginaPrincipalView));
+            _mappings.Add(typeof(PagamentoViewModel), typeof(PagamentoView));
         }
     }
 }

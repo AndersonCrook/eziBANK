@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="eziBANK.View.PagamentoView"
+             Title="Pagamento">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout BackgroundColor="#E8E8E8" Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="40" >
+                
+                <Label Text="Saldo em conta R$:" TextColor="#2ECBD6" FontAttributes="Bold" FontSize="Medium"
+                       HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
+                <Label Text="2.000,65" TextColor="#2ECBD6" FontSize="Medium"
+                       HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
+                
+            </StackLayout>
+            
+            <StackLayout  Margin="10">
+                
+                <Label Text="Faça a leitura do codigo de barras através do leitor "
+                       TextColor="#A2A2A2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                
+                <Label Text="ou digite os números correspondentes."
+                       TextColor="#A2A2A2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding CodigoBarras}" Placeholder="Código de barras" TextColor="#A2A2A2"
+                       HorizontalOptions="FillAndExpand" FontSize="Medium" x:Name="EntryCodigoBarras"/>
+                
+                <ImageButton Source="CameraIcon.png" BackgroundColor="Transparent" 
+                             HeightRequest="25" WidthRequest="25" HorizontalOptions="Start"
+                             Command="{Binding AtivarScanner}" />       
+
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

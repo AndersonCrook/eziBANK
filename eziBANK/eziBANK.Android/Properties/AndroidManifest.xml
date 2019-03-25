@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.eziBANK">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
-	<application android:label="eziBANK.Android"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.AlphaCompany.eziBANK">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<application android:label="eziBANK.Android" android:icon="@drawable/icon"></application>
 </manifest>

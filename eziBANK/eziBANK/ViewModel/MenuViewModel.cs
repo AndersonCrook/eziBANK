@@ -5,27 +5,34 @@ using Xamarin.Forms;
 
 namespace eziBANK.ViewModel
 {
-     class PrimeiroAcessoViewModel : BaseVM
+    public class MenuViewModel : BaseVM
     {
+
         INavigationService _serviceNavigation;
-        public PrimeiroAcessoViewModel(INavigationService serviceNavigation)
+
+        public MenuViewModel()
+        {
+        }
+
+        public MenuViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
         }
-        /// <summary>
-        /// Gets the proximo command.
-        /// </summary>
-        /// <value>The proximo command.</value>
-        /// 
-        public ICommand Login
+         public ICommand Navegar
         {
             get
             {
                 return new Command(() =>
                 {
-                        _serviceNavigation.NavigateToAsync<LoginViewModel>();
+                    voltar();
                 });
             }
         }
+
+        public async void voltar()
+        {
+            await _serviceNavigation.NavigateToAsync<PagamentoViewModel>();
+        }
     }
+
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:page="clr-namespace:eziBANK.View"
+                  xmlns:local="clr-namespace:eziBANK.Model.ModelControls; assembly:GradientColor"
+                  x:Class="eziBANK.View.MenuView">
+    <MasterDetailPage.Master>
+       <ContentPage Title="Menu">
+             <ScrollView  Padding="0" Margin="0" BackgroundColor="#2ECBD6">
+             <local:StackLayoutGradiente StartColor="#2ECBD6" EndColor="#2DA0D1" >
+                <StackLayout >
+                   
+                        <StackLayout Margin="15">
+                            
+                        </StackLayout>
+                        <StackLayout Margin="10">
+                            <Label Text="ANDERSON OLIVEIRA BEZERRA" TextColor="#ffffff" />
+                            
+                            <StackLayout Orientation="Horizontal">
+                                 <Label Text="Conta: 1360611-2" TextColor="#ffffff"/>
+                                 <Label Text="Agência: 0010-10" TextColor="#ffffff"/>
+                            </StackLayout>
+                           
+                        </StackLayout>
+                        
+                        <BoxView  HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="#ffffff"/>
+                        
+                        <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                        <Button Text="3" BackgroundColor="Transparent"/>
+                         <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                        <Button Text="3" BackgroundColor="Transparent"/>
+                         <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                        <Button Text="3" BackgroundColor="Transparent"/>
+                        <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                        <Button Text="3" BackgroundColor="Transparent"/>
+                         <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                        <Button Text="3" BackgroundColor="Transparent"/>
+                        <Button Text="1" BackgroundColor="Transparent" Command="{Binding Navegar}"/>
+                       <Button Text="2" BackgroundColor="Transparent"/>
+                       <Button Text="3" BackgroundColor="Transparent"/>
+                  
+                </StackLayout>
+                
+            </local:StackLayoutGradiente>
+           </ScrollView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+        <x:Arguments>
+             <page:PaginaPrincipalView/>
+        </x:Arguments>
+    </NavigationPage>
+       
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

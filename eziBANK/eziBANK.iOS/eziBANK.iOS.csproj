@@ -97,6 +97,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NavigationBarGradiente.cs" />
+    <Compile Include="CustomRender\GradientyeStakLayoutRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -165,6 +166,15 @@
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
       <Version>2.5.1</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.Fingerprint">
+      <Version>1.4.7</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -185,5 +195,11 @@
     <BundleResource Include="Resources\baloes.png" />
     <BundleResource Include="Resources\circulo.png" />
     <BundleResource Include="Resources\logoezibank.png" />
+    <BundleResource Include="Resources\Digital.png" />
+    <BundleResource Include="Resources\CameraIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomRender\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 </Project>
