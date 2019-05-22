@@ -175,6 +175,9 @@
     <PackageReference Include="ZXing.Net.Mobile.Forms">
       <Version>2.4.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -197,6 +200,26 @@
     <BundleResource Include="Resources\logoezibank.png" />
     <BundleResource Include="Resources\Digital.png" />
     <BundleResource Include="Resources\CameraIcon.png" />
+    <BundleResource Include="Resources\bandt.jpg" />
+    <BundleResource Include="Resources\bg.png" />
+    <BundleResource Include="Resources\BotaoEsconder.png" />
+    <BundleResource Include="Resources\cartao.png" />
+    <BundleResource Include="Resources\casas.jpg" />
+    <BundleResource Include="Resources\EuMesmo.png" />
+    <BundleResource Include="Resources\EuMesmo1.png" />
+    <BundleResource Include="Resources\fotoezi.png" />
+    <BundleResource Include="Resources\gradient.axml" />
+    <BundleResource Include="Resources\MCD.png" />
+    <BundleResource Include="Resources\pagamentos.png" />
+    <BundleResource Include="Resources\primeiroAcesso.png" />
+    <BundleResource Include="Resources\SAIR.png" />
+    <BundleResource Include="Resources\sino.png" />
+    <BundleResource Include="Resources\SplashScreen.gif" />
+    <BundleResource Include="Resources\starbucks.jpg" />
+    <BundleResource Include="Resources\Starbucks.png" />
+    <BundleResource Include="Resources\transferencia.png" />
+    <BundleResource Include="Resources\uber.jpg" />
+    <BundleResource Include="Resources\uber.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRender\" />

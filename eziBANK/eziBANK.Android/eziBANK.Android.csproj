@@ -127,6 +127,11 @@
     <AndroidResource Include="Resources\drawable\SplashScreen.png" />
     <AndroidResource Include="Resources\drawable\Digital.png" />
     <AndroidResource Include="Resources\drawable\CameraIcon.png" />
+    <AndroidResource Include="Resources\drawable\pagamentos.png" />
+    <AndroidResource Include="Resources\drawable\SAIR.png" />
+    <AndroidResource Include="Resources\drawable\sino.png" />
+    <AndroidResource Include="Resources\drawable\cartao.png" />
+    <AndroidResource Include="Resources\drawable\transferencia.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

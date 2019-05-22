@@ -12,18 +12,13 @@ namespace eziBANK.ViewModel
         {
             _serviceNavigation = serviceNavigation;
         }
-        /// <summary>
-        /// Gets the proximo command.
-        /// </summary>
-        /// <value>The proximo command.</value>
-        /// 
         public ICommand Login
         {
             get
             {
                 return new Command(() =>
                 {
-                        _serviceNavigation.NavigateToAsync<LoginViewModel>();
+                    _serviceNavigation.NavigateToAsync<LoginViewModel>();
                 });
             }
         }

@@ -163,6 +163,7 @@ namespace eziBANK.Services.Navigation
             _mappings.Add(typeof(MenuViewModel), typeof(MenuView));
             _mappings.Add(typeof(PaginaPrincipalViewModel), typeof(PaginaPrincipalView));
             _mappings.Add(typeof(PagamentoViewModel), typeof(PagamentoView));
+            // _mappings.Add(typeof(MapaViewModel), typeof(MapaView));
         }
     }
 }

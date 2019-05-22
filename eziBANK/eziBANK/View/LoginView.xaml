@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eziBANK.View.LoginView">
@@ -8,7 +8,7 @@
 
             <StackLayout Padding="15">
                 
-                <Image Source="logo.png" Aspect="AspectFit" />
+                <Image Source="logo" Aspect="AspectFit" />
 
                 <Label Text="Bem vindo!" Margin="15" TextColor="LightBlue"
                     VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
@@ -17,6 +17,18 @@
                 <Entry Placeholder="Senha" IsPassword="true" Text="{Binding Senha}"/>
 
                 <Button Text="Logar" TextColor="White"  BackgroundColor="LightBlue" Command="{Binding LogarCommand}" />
+
+            </StackLayout>
+            
+             <StackLayout Padding="15" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+               
+                <Image Source="logoezibank" Aspect="AspectFit" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" 
+                       HeightRequest="35"/>
+                
+                <Button Text="Caixa eletronico" TextColor="#A2A2A2" FontSize="Micro" FontAttributes="Bold"
+                        BorderWidth="2" BorderColor="#A2A2A2" BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand" HeightRequest="40" BorderRadius="9"
+                        Command="{Binding AbrirMapas}"/>
 
             </StackLayout>
             

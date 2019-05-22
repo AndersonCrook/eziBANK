@@ -22,6 +22,7 @@
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +45,8 @@
     <Compile Remove="View\PrimeiroAcesso.xaml.cs" />
     <Compile Remove="View\MenuPrincipalView.cs" />
     <Compile Remove="View\MenuView.cs" />
+    <Compile Remove="Model\ModelControls\MenuModel.cs" />
+    <Compile Remove="Services\MenuModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

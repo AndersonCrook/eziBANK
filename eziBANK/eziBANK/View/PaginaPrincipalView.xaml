@@ -1,10 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="eziBANK.View.PaginaPrincipalView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="hello world" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+             xmlns:CircleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" 
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="eziBANK.View.PaginaPrincipalView"
+             BackgroundColor="#F7F6F6"
+             Title="Menu Principal">
+    <ContentPage.Content >
+        <StackLayout VerticalOptions="FillAndExpand"  HeightRequest="250" HorizontalOptions="FillAndExpand">
+            
+            <StackLayout  Margin="0" Padding="0"  HorizontalOptions="FillAndExpand" HeightRequest="300" >
+                <StackLayout Margin="0" Spacing="0" Padding="0" HeightRequest="300" HorizontalOptions="FillAndExpand">
+                     <Image Source="fotoezi.png" Aspect="AspectFill" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+             </StackLayout>
+            
+                <Frame Style="{StaticResource FrameStyle}" HeightRequest="150"  HorizontalOptions="FillAndExpand" Margin="10,-75,10,0">
+                    <StackLayout>
+                        <StackLayout>
+                                            
+                            <Label  Text="Grabiella Reis" TextColor="#2ECBD6" HorizontalOptions="Center" VerticalTextAlignment="Center" 
+                                    FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="20" Opacity="10"/>  
+                                                        
+                            <Label  Text="Front end Developer" TextColor="#2ECBD6" HorizontalOptions="Center" VerticalTextAlignment="Center" 
+                                    FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="14" Opacity="10"/> 
+                            </StackLayout>
+                                                    
+                            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <StackLayout HorizontalOptions="Start">
+                                    <Label  Text="{Binding SaldoAtual} " TextColor="#2ECBD6" HorizontalOptions="Center" VerticalTextAlignment="Center" 
+                                            FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="18" Opacity="10" />  
+                                                                    
+                                    <Label  Text="Saldo" TextColor="#A2A2A@" HorizontalOptions="Center" VerticalTextAlignment="Center" 
+                                            FontAttributes="Bold" HorizontalTextAlignment="Start" FontSize="11" Opacity="10" /> 
+                                    </StackLayout>
+                                </StackLayout>
+                                                        
+                            <StackLayout >
+                                <ImageButton Source="BotaoEsconder.png" BackgroundColor="Transparent" WidthRequest="50"
+                                             HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding EsconderCommand}"/>
+                            </StackLayout>
+                        </StackLayout>    
+                    </StackLayout>
+                 </Frame>
+           
+            
+             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                 <ScrollView  Orientation="Vertical"  HorizontalOptions="FillAndExpand" >
+                    
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="5">
+                        
+                        <Label Text="PRINCIPAIS GASTOS DO MÊS" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="#2ECBD6" FontAttributes="Bold" FontSize="Large"/>
+                    
+                        <StackLayout Orientation="Horizontal" Margin="30,0,0,0" HeightRequest="70" BackgroundColor="#ffffff">
+                                <Frame  CornerRadius="30"  VerticalOptions="Center" WidthRequest="60" HeightRequest="60" Padding="0" Margin="-30,0,0,0" BackgroundColor="#ffffff" IsPlatformEnabled="true">
+                                    <Frame  CornerRadius="25" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="50" HeightRequest="50" Padding="0" IsPlatformEnabled="true">
+                                        <CircleImage:CircleImage  Source="MCD.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" />
+                                        <Frame.HasShadow>
+                                            <OnPlatform x:TypeArguments="x:Boolean">
+                                                <On Platform="Android" Value="true" />
+                                                <On Platform="iOS" Value="false" />
+                                            </OnPlatform>
+                                    </Frame.HasShadow>
+                                    </Frame>
+                                
+                                    <Frame.HasShadow>
+                                            <OnPlatform x:TypeArguments="x:Boolean" >
+                                                <On Platform="Android" Value="true" />
+                                                <On Platform="iOS" Value="false" />
+                                            </OnPlatform>
+                                    </Frame.HasShadow>
+                                </Frame>
+                            
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                                    <Label Text="Starbucks" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" TextColor="#2ECBD6"/>
+                                    <Label   Text="19 Abril 2019:" FontSize="12" VerticalOptions="Center" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="#A2A2A2" />
+                                </StackLayout>
+                        
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End"  Margin="15"> 
+                                    <Label Text="R$" FontSize="14" HorizontalOptions="End" VerticalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="#2ECBD6"/>
+                                   <Label Text="27,99" FontSize="14" HorizontalOptions="End" VerticalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="#2ECBD6"/>
+                                </StackLayout>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                 </ScrollView>
+             </StackLayout>  
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+

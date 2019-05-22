@@ -20,7 +20,7 @@ namespace eziBANK.ViewModel
             _serviceNavigation = serviceNavigation;
             ValidarDigital();
         }
-        
+
         public ICommand LogarCommand
         {
             get
@@ -39,10 +39,6 @@ namespace eziBANK.ViewModel
             {
                 model.Usuario = this.Usuario;
                 model.Senha = this.Senha;
-
-                //var result = await service.Logar(model);
-                //if (result)
-                //await _serviceNavigation.NavigateToAsync<HomeViewModel>();
                 await _serviceNavigation.NavigateToAsync<MenuViewModel>();
             }
             else
@@ -51,13 +47,30 @@ namespace eziBANK.ViewModel
             }
         }
 
+        public ICommand AbrirMapas
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Mapa();
+                });
+            }
+        }
+
+        public async void Mapa()
+        {
+
+            //await _serviceNavigation.NavigateToAsync<MapaViewModel>();
+        }
+
         async void ValidarDigital()
         {
             var scanResult = await CrossFingerprint.Current.IsAvailableAsync(true);
 
             if (scanResult)
             {
-                var auth = await CrossFingerprint.Current.AuthenticateAsync("COLOCA O dedo ai");
+                var auth = await CrossFingerprint.Current.AuthenticateAsync("Agora é so colocar o dedo no sensor ;)");
                 if (auth.Authenticated)
                 {
                     await _serviceNavigation.NavigateToAsync<MenuViewModel>();
